@@ -7,7 +7,6 @@ import { useTranslation } from "react-i18next";
 const Language = () => {
   const { i18n } = useTranslation();
   const [open, setOpen] = useState(false);
-  console.log(i18n.languages);
   return (
     <Box position={"relative"}>
       <ul className="flex flex-col gap-4">

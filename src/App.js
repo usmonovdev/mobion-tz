@@ -1,9 +1,12 @@
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import { useEffect, useMemo, useState } from "react";
 import { useSelector } from "react-redux";
-import Navbar from "./components/Navbar/Navbar";
+import { Navbar, Footer } from "./components";
 import Aos from "aos";
 import 'aos/dist/aos.css';
+const { palette } = createTheme();
+const { augmentColor } = palette;
+const createColor = (mainColor) => augmentColor({ color: { main: mainColor } });
 
 function App() {
   const [mode, setMode] = useState("light")
@@ -13,6 +16,7 @@ function App() {
       mode,
       ...(mode === "light" ?
         {
+          blue: createColor("#012350"),
           primary: {
             main: "#02C981",
           },
@@ -27,6 +31,7 @@ function App() {
             blueOpacity: "#01235066"
           }
         } : {
+          blue: createColor("#012350"),
           primary: {
             main: '#02C981',
           },
@@ -84,6 +89,7 @@ function App() {
       <div className="container-custom">
         <Navbar />
       </div>
+      <Footer />
     </ThemeProvider>
   );
 }

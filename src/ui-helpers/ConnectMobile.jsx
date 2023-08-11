@@ -20,7 +20,7 @@ const ConnectMobile = () => {
         transform: "translateX(-50%)"
       }}
     >
-      <TextP className="text-[18px] font-semibold">{t("helpers.connect")}</TextP>
+      <TextP>{t("helpers.connect")}</TextP>
     </Box>
   );
 };

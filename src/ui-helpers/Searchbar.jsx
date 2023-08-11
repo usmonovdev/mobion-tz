@@ -16,8 +16,8 @@ const Searchbar = ({ value, setValue }) => {
       borderRadius={'50px'}
       padding={'8px 20px'}
       sx={{
-        "@media screen and (max-width: 720px)": {
-          width: "280px"
+        "@media screen and (max-width: 662px)": {
+          width: "100%"
         }
       }}
     >

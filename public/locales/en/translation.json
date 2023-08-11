@@ -11,6 +11,21 @@
     "filials": "Our branches",
     "search": "Product search..."
   },
+  "footer": {
+    "section1": {
+      "title": "About us",
+      "catalog": "Catalog",
+      "about": "Delivery"
+    },
+    "section2": {
+      "title": "For users",
+      "contact": "Contact us",
+      "faq": "Frequently asked questions"
+    },
+    "contact": "Contact us",
+    "info": "© 2023 Mobian. All rights reserved",
+    "creator": "developed"
+  },
   "helpers": {
     "connect": "Contact us"
   }

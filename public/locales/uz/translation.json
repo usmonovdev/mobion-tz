@@ -11,6 +11,21 @@
     "filials": "Filiallarimiz",
     "search": "Mahsulotni qidirish..."
   },
+  "footer": {
+    "section1": {
+      "title": "Biz haqimizda",
+      "catalog": "Catalog",
+      "about": "Yetkazib berish"
+    },
+    "section2": {
+      "title": "Foydalanuvchilarga",
+      "contact": "Biz bilan bog’lanish",
+      "faq": "Tez-tez so'raladigan savollar"
+    },
+    "contact": "Bog‘lanish",
+    "info": "© 2023 Mobion. Barcha huquqlar himoyalangan",
+    "creator": "tomonidan ishlab chiqilgan"
+  },
   "helpers": {
     "connect": "Biz bilan bog’lanish"
   }

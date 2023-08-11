@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Box, FormControlLabel, Switch } from "@mui/material";
+import { FormControlLabel, Switch } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { asyncToggleTheme } from "../store/themeSlice";
 
@@ -58,6 +58,7 @@ const ThemeToggle = () => {
     <>
       <FormControlLabel
         checked={isDarkMode}
+        sx={{ margin: 0 }}
         onClick={() => dispatch(asyncToggleTheme())}
         control={<MaterialUISwitch />}
       />
