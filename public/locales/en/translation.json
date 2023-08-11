@@ -1,0 +1,17 @@
+{
+  "header": {
+    "catalog": {
+      "title": "Catalog",
+      "earbud": "Earbud",
+      "electronics": "Electronics",
+      "holster": "Telephone holster",
+      "eyeglass": "Eyeglasses"
+    },
+    "about": "About Us",
+    "filials": "Our branches",
+    "search": "Product search..."
+  },
+  "helpers": {
+    "connect": "Contact us"
+  }
+}

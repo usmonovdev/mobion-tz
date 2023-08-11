@@ -1,0 +1,17 @@
+{
+  "header": {
+    "catalog": {
+      "title": "Catalog",
+      "earbud": "Quloqchinlar",
+      "electronics": "Elektronika",
+      "holster": "Telefon g’ilof",
+      "eyeglass": "Ko'zoynaklar"
+    },
+    "about": "Biz haqimizda",
+    "filials": "Filiallarimiz",
+    "search": "Mahsulotni qidirish..."
+  },
+  "helpers": {
+    "connect": "Biz bilan bog’lanish"
+  }
+}

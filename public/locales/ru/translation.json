@@ -1,0 +1,17 @@
+{
+  "header": {
+    "catalog": {
+      "title": "Каталог",
+      "earbud": "Наушники",
+      "electronics": "Электроника",
+      "holster": "Чехол для телефона",
+      "eyeglass": "Очки"
+    },
+    "about": "О нас",
+    "filials": "Наши филиалы",
+    "search": "Поиск товара..."
+  },
+  "helpers": {
+    "connect": "Связаться с нами"
+  }
+}
