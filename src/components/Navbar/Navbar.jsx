@@ -8,13 +8,14 @@ import { TextP } from "../../mui-customizations/Typography";
 import { Catalog, Language, Searchbar, ThemeToggle } from "../../ui-helpers";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Mobile from "./Mobile";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const { t } = useTranslation();
   const [value, setValue] = useState("");
   const [open, setOpen] = useState(false);
   const { palette } = useTheme();
+  const navigate = useNavigate()
   return (
     <nav className="w-full h-[96px] flex flex-row items-center justify-between gap-3">
       <div className="desktop:hidden" onClick={() => setOpen(!open)}>
@@ -34,6 +35,7 @@ const Navbar = () => {
             <li
               key={link.id}
               className="flex flex-row items-center gap-1 cursor-pointer"
+              onClick={() => navigate(link.link)}
             >
               <TextP>{t(link.label)}</TextP>
             </li>

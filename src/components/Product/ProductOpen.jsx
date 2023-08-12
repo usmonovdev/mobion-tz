@@ -7,7 +7,7 @@ import {
   TextInfo,
   TextP,
 } from "../../mui-customizations/Typography.js";
-import { Box, Rating } from "@mui/material";
+import { Box, Button, Rating } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "@emotion/react";
 
@@ -24,7 +24,7 @@ const ProductOpen = () => {
               {product.id == id ? (
                 <>
                   <div className="desktop:w-2/4 w-full">
-                    <img src={product.photo} />
+                    <img className="w-full" src={product.photo} />
                   </div>
                   <div className="desktop:w-2/4 w-full flex flex-col gap-4">
                     <TextHeader>{product.name}</TextHeader>
@@ -79,9 +79,9 @@ const ProductOpen = () => {
                       <TextP>
                         {t("newProducts.available")}: {product.avaliable}
                       </TextP>
-                      <button className="py-3 px-6 bg-[#02C981] rounded-full text-[#fff]">
-                        {t("newProducts.btn")}
-                      </button>
+                      <Button variant="contained" sx={{ borderRadius: "20px"}} size="large" className="py-3 px-6 bg-[#02C981] rounded-full text-[#fff]">
+                        {t("helpers.shop")}
+                      </Button>
                     </div>
                   </div>
                 </>

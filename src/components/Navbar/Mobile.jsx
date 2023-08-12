@@ -4,9 +4,11 @@ import { Catalog, CatalogMobile, ConnectMobile, Language, ThemeToggle } from "..
 import { navbarLinks } from "../../data/navbar";
 import { TextP } from "../../mui-customizations/Typography";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const Mobile = ({ open, setOpen }) => {
   const { t } = useTranslation();
+  const navigate = useNavigate()
   return (
     <Box
       position={"absolute"}
@@ -53,6 +55,7 @@ const Mobile = ({ open, setOpen }) => {
                   <li
                     key={link.id}
                     className="flex flex-row items-center border border-t-0 border-r-0 border-l-0 pb-3 gap-1 cursor-pointer"
+                    onClick={() => navigate(link.link)}
                   >
                     <TextP>{t(link.label)}</TextP>
                   </li>

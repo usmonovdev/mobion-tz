@@ -21,6 +21,10 @@
     "all": "Umumiy",
     "details": "Mahsulot tafsilotlari"
   },
+  "about": {
+    "title": "Biz haqimizda",
+    "description": "Mobion do'koniga xush kelibsiz. Bu yerda siz barcha Elektronika mahsulotlarini topishingiz mumkin. 2 yildan ortiq vaqt davomida biz mijozlarimiz uchun to'g'ri gadjetni tanlash va maslahat berish bilan shug'ullanamiz. Bozorda mavjud bo'lganimiz davomida biz shaharlararo yetkazib berishni optimallashtirishga muvaffaq bo'ldik, shuning uchun siz gadjetni uch kun ichida olasiz, agar sizga shahar ichida yetkazib berish kerak bo'lsa, biz gadjetni 2 soat ichida yetkazib beramiz. Mijozlarimizning 90% doimiy mijozlarga aylanadi, chunki biz bir yil kafolat beramiz. Biz haftada 7 kun 10:00 dan 20:00 gacha ishlaymiz. Bizga tashrif buyuring, biz har doim sizga mos gadjetni topishga yordam beramiz."
+  },
   "faq": {
     "title": "Tez-tez so'raladigan savollar",
     "card1": {
