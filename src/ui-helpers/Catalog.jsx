@@ -16,7 +16,7 @@ const Catalog = () => {
       <TextP>{t("header.catalog.title")}</TextP>
       <IoIosArrowDown />
       {open ? (
-        <Box bgcolor={'custom.greyToWhite'} className="absolute top-0 mt-8 p-3 flex flex-col gap-5 rounded-lg">
+        <Box width={'200px'} bgcolor={'custom.background'} className="absolute top-0 mt-8 p-3 flex flex-col gap-5 rounded-lg">
           <ul>
             {navbarCatalog.map((catalog) => {
               return (

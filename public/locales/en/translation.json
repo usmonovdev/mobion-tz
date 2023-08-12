@@ -11,6 +11,42 @@
     "filials": "Our branches",
     "search": "Product search..."
   },
+  "newProducts": {
+    "title": "New Products",
+    "comment": "Comment",
+    "btn": "See all"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "card1": {
+      "title": "What methods of delivery are there?",
+      "info": "Delivery by courier is 30,000. Courier service is free if the order value price exceeds 490,000 rubles."
+    },
+    "card2": {
+      "title": "What methods of delivery are there?",
+      "info": "Delivery by courier is 30,000. Courier service is free if the order value price exceeds 490,000 rubles."
+    },
+    "card3": {
+      "title": "What methods of delivery are there?",
+      "info": "Delivery by courier is 30,000. Courier service is free if the order value price exceeds 490,000 rubles."
+    },
+    "card4": {
+      "title": "What methods of delivery are there?",
+      "info": "Delivery by courier is 30,000. Courier service is free if the order value price exceeds 490,000 rubles."
+    },
+    "card5": {
+      "title": "What methods of delivery are there?",
+      "info": "Delivery by courier is 30,000. Courier service is free if the order value price exceeds 490,000 rubles."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Your name",
+    "namePlaceholder": "Name",
+    "phone": "Your Phone Number",
+    "phonePlaceholder": "Phone",
+    "submit": "Submit"
+  },
   "footer": {
     "section1": {
       "title": "About us",
@@ -27,6 +63,7 @@
     "creator": "developed"
   },
   "helpers": {
-    "connect": "Contact us"
+    "connect": "Contact us",
+    "shop": "Shop now"
   }
 }

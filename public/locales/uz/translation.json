@@ -1,7 +1,7 @@
 {
   "header": {
     "catalog": {
-      "title": "Catalog",
+      "title": "Katalog",
       "earbud": "Quloqchinlar",
       "electronics": "Elektronika",
       "holster": "Telefon g’ilof",
@@ -11,10 +11,46 @@
     "filials": "Filiallarimiz",
     "search": "Mahsulotni qidirish..."
   },
+  "newProducts": {
+    "title": "Yangi Maxsulotlar",
+    "comment": "Sharh",
+    "btn": "Barchasini ko'rish"
+  },
+  "faq": {
+    "title": "Tez-tez so'raladigan savollar",
+    "card1": {
+      "title": "Yetkazib berishning qanday usullari mavjud?",
+      "info": "Kuryer orqali yetkazib berish 30 000 so’mni tashkil etadi. Agar buyurtma qiymat narxi 490 000 so’mdan oshsa, kuryer xizmati bepul hisoblanadi."
+    },
+    "card2": {
+      "title": "Yetkazib berishning qanday usullari mavjud?",
+      "info": "Kuryer orqali yetkazib berish 30 000 so’mni tashkil etadi. Agar buyurtma qiymat narxi 490 000 so’mdan oshsa, kuryer xizmati bepul hisoblanadi."
+    },
+    "card3": {
+      "title": "Yetkazib berishning qanday usullari mavjud?",
+      "info": "Kuryer orqali yetkazib berish 30 000 so’mni tashkil etadi. Agar buyurtma qiymat narxi 490 000 so’mdan oshsa, kuryer xizmati bepul hisoblanadi."
+    },
+    "card4": {
+      "title": "Yetkazib berishning qanday usullari mavjud?",
+      "info": "Kuryer orqali yetkazib berish 30 000 so’mni tashkil etadi. Agar buyurtma qiymat narxi 490 000 so’mdan oshsa, kuryer xizmati bepul hisoblanadi."
+    },
+    "card5": {
+      "title": "Yetkazib berishning qanday usullari mavjud?",
+      "info": "Kuryer orqali yetkazib berish 30 000 so’mni tashkil etadi. Agar buyurtma qiymat narxi 490 000 so’mdan oshsa, kuryer xizmati bepul hisoblanadi."
+    }
+  },
+  "contact": {
+    "title": "Biz bilan bo’glanish",
+    "name": "Ismingiz",
+    "namePlaceholder": "Ism",
+    "phone": "Telefon Raqamingiz",
+    "phonePlaceholder": "Placeholder",
+    "submit": "Yuborish"
+  },
   "footer": {
     "section1": {
       "title": "Biz haqimizda",
-      "catalog": "Catalog",
+      "catalog": "Katalog",
       "about": "Yetkazib berish"
     },
     "section2": {
@@ -27,6 +63,7 @@
     "creator": "tomonidan ishlab chiqilgan"
   },
   "helpers": {
-    "connect": "Biz bilan bog’lanish"
+    "connect": "Biz bilan bog’lanish",
+    "shop": "Hozir xarid qiling"
   }
 }
