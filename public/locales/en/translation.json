@@ -25,6 +25,11 @@
     "title": "About us",
     "description": "Welcome to Mobion store. Here you can find all electronics products. For more than 2 years, we have been engaged in choosing and advising the right gadget for our customers. Throughout our presence on the market, we have managed to optimize intercity delivery, so you will receive the gadget in three days, if you need delivery within the city, we will deliver the gadget in 2 hours. 90% of our customers become regular customers, because we guarantee a year. We work 7 days a week from 10:00 to 20:00. Visit us, we will always help you find the right gadget."
   },
+  "filial": {
+    "shop": "Shop",
+    "location": "Location",
+    "order": "Working order"
+  },
   "faq": {
     "title": "Frequently asked questions",
     "card1": {

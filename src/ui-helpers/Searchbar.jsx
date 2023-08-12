@@ -23,7 +23,7 @@ const Searchbar = ({ value, setValue }) => {
     >
       <input
         placeholder={t("header.search")}
-        className="outline-none bg-transparent"
+        className="outline-none text-[#012350] bg-transparent"
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
