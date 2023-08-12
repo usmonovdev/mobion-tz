@@ -1,5 +1,6 @@
 export { default as Navbar } from "./Navbar/Navbar"
 export { default as Footer } from "./Footer"
+export { default as Tel } from "./Tel"
 
 // home
 export { default as Home } from "./Home/Home"

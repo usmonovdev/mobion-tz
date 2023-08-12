@@ -8,18 +8,25 @@ import { TextP } from "../../mui-customizations/Typography";
 import { Catalog, Language, Searchbar, ThemeToggle } from "../../ui-helpers";
 import { RxHamburgerMenu } from "react-icons/rx";
 import Mobile from "./Mobile";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { t } = useTranslation();
   const [value, setValue] = useState("");
   const [open, setOpen] = useState(false);
-  const { palette } = useTheme()
+  const { palette } = useTheme();
   return (
     <nav className="w-full h-[96px] flex flex-row items-center justify-between gap-3">
       <div className="desktop:hidden" onClick={() => setOpen(!open)}>
         <RxHamburgerMenu className="text-4xl cursor-pointer" />
       </div>
-      <img src={`${palette.mode == "light" ? logo : whiteLogo}`} alt="logo" className="w-[100px] phone:block hidden" />
+      <Link to={"/"}>
+        <img
+          src={`${palette.mode == "light" ? logo : whiteLogo}`}
+          alt="logo"
+          className="w-[100px] phone:block hidden"
+        />
+      </Link>
       <ul className="desktop:flex hidden flex-row gap-4">
         <Catalog />
         {navbarLinks.map((link) => {

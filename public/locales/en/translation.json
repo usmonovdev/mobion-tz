@@ -16,7 +16,10 @@
     "comment": "Comment",
     "available": "Available",
     "color": "Choose a color",
-    "btn": "See all"
+    "btn": "See all",
+    "features": "Technical characteristics",
+    "all": "General",
+    "details": "Product details"
   },
   "faq": {
     "title": "Frequently asked questions",

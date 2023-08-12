@@ -16,7 +16,10 @@
     "comment": "Sharh",
     "available": "Mavjud",
     "color": "Rangini tanlang",
-    "btn": "Barchasini ko'rish"
+    "btn": "Barchasini ko'rish",
+    "features": "Texnik xususiyatlari",
+    "all": "Umumiy",
+    "details": "Mahsulot tafsilotlari"
   },
   "faq": {
     "title": "Tez-tez so'raladigan savollar",
