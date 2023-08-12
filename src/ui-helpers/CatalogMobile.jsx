@@ -14,7 +14,7 @@ const CatalogMobile = () => {
       onClick={() => setOpen(!open)}
     >
       <div className="flex flex-row items-center gap-1 w-full justify-between">
-        <TextP>{t("header.catalog.title")}</TextP>
+        <TextP className="hover:text-[#02C981] transition">{t("header.catalog.title")}</TextP>
         <IoIosArrowDown />
       </div>
       {open ? (
@@ -23,7 +23,7 @@ const CatalogMobile = () => {
             {navbarCatalog.map((catalog) => {
               return (
                 <li className=" pt-3 pb-2">
-                  <TextP>{t(catalog.label)}</TextP>
+                  <TextP className="hover:text-[#02C981] transition">{t(catalog.label)}</TextP>
                 </li>
               );
             })}

@@ -21,7 +21,7 @@ const NewProducts = () => {
       <div className="cards">
         {newProduct.map((product) => {
           return (
-            <div className="flex flex-col gap-2" onClick={() => handleOpen(product.id)}>
+            <div key={product.id} className="flex flex-col gap-2" onClick={() => handleOpen(product.id)}>
               <img src={product.photo} alt={product.name} className="rounded-2xl cursor-pointer"/>
               <div className="flex flex-col gap-2">
                 <TextP>{product.name.length > 15 ? <>{product.name.slice(0,15)}...</> : <>{product.name}</>}</TextP>

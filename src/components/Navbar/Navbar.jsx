@@ -37,7 +37,7 @@ const Navbar = () => {
               className="flex flex-row items-center gap-1 cursor-pointer"
               onClick={() => navigate(link.link)}
             >
-              <TextP>{t(link.label)}</TextP>
+              <TextP className="hover:text-[#02C981] transition">{t(link.label)}</TextP>
             </li>
           );
         })}

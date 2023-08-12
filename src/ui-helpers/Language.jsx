@@ -15,6 +15,7 @@ const Language = () => {
             <>
               {i18n.language == lng.value ? (
                 <li
+                  key={lng.id}
                   className="flex flex-row items-center gap-4 cursor-pointer"
                   onClick={() => setOpen(!open)}
                 >
@@ -29,7 +30,11 @@ const Language = () => {
         })}
       </ul>
       {open ? (
-        <ul className="flex flex-col gap-4 absolute mt-4" data-aos="zoom-in" data-aos-duration="300">
+        <ul
+          className="flex flex-col gap-4 absolute mt-4"
+          data-aos="zoom-in"
+          data-aos-duration="300"
+        >
           {languages.map((lng) => {
             return (
               <>

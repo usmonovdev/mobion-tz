@@ -62,7 +62,18 @@ function App() {
             hegiht: "100vh",
             overflowX: "hidden",
             backgroundColor: theme.palette.custom.background,
-          }
+          },
+          "::-webkit-scrollbar": {
+            width: "8px",
+          },
+          "::-webkit-scrollbar-thumb": {
+            borderRadius: "4px",
+            backgroundColor: theme.palette.primary.main
+          },
+          "::-webkit-scrollbar-thumb:hover": {
+            borderRadius: "4px",
+            backgroundColor: theme.palette.primary.dark
+          },
         }),
       }
     },

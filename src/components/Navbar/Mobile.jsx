@@ -57,7 +57,7 @@ const Mobile = ({ open, setOpen }) => {
                     className="flex flex-row items-center border border-t-0 border-r-0 border-l-0 pb-3 gap-1 cursor-pointer"
                     onClick={() => navigate(link.link)}
                   >
-                    <TextP>{t(link.label)}</TextP>
+                    <TextP className="hover:text-[#02C981] transition">{t(link.label)}</TextP>
                   </li>
                 );
               })}
