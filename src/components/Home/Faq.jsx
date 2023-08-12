@@ -1,9 +1,10 @@
 import { HiChevronUp } from "react-icons/hi";
 import { faqs } from "../../data/faqs";
 import { useTranslation } from "react-i18next";
-import { TextH1, TextH2, TextHeader } from "../../mui-customizations/Typography";
+import { TextH1, TextH2, TextH3, TextHeader, TextP } from "../../mui-customizations/Typography";
 import { useState } from "react";
 import styled from "@emotion/styled";
+import { Box } from "@mui/material";
 
 export const StyledTextHeader = styled(TextHeader)(({ theme }) => ({
   fontSize: "32px",
@@ -28,32 +29,33 @@ const Faq = () => {
   return (
     <div className="w-full">
       <TextHeader marginBottom={"30px"}>{t("faq.title")}</TextHeader>
-      <div className="w-full mx-auto rounded-2xl border overflow-hidden p-4">
+      <div className="w-full max-w-[700px] mx-auto overflow-hidden">
         {faqs.map((faq) => {
           return (
             <div
-              className="w-full cursor-pointer border border-t-0 border-l-0 border-r-0"
+              className="w-full cursor-pointer"
               onClick={() => setOpen(faq.id)}
             >
-              <div className="w-full flex flex-row items-center justify-between">
-                <TextH1 padding={"10px 0"}>
+              <div className="p-4 w-full flex flex-row items-center border justify-between">
+                <TextH3>
                   {t(faq.title)}
-                </TextH1>
+                </TextH3>
                 <HiChevronUp
                   className={`text-4xl transition ${
                     open == faq.id ? "rotate-180" : ""
                   }`}
                 />
               </div>
-              <div
+              <Box
+                bgcolor={'custom.whiteToBlack'}
                 className={`${
                   open == faq.id
                     ? "block translate-y-0"
                     : "hidden -translate-y-5"
-                } transition`}
+                } transition p-4`}
               >
-                <TextH2>{t(faq.info)}</TextH2>
-              </div>
+                <TextP>{t(faq.info)}</TextP>
+              </Box>
             </div>
           );
         })}
