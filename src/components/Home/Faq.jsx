@@ -36,7 +36,7 @@ const Faq = () => {
               className="w-full cursor-pointer"
               onClick={() => setOpen(faq.id)}
             >
-              <div className="p-4 w-full flex flex-row items-center border justify-between">
+              <div className="p-4 w-full flex flex-row items-center border border-[#9E9E9E] justify-between">
                 <TextH3>
                   {t(faq.title)}
                 </TextH3>
