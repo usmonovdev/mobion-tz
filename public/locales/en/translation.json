@@ -14,6 +14,8 @@
   "newProducts": {
     "title": "New Products",
     "comment": "Comment",
+    "available": "Available",
+    "color": "Choose a color",
     "btn": "See all"
   },
   "faq": {

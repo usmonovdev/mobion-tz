@@ -12,8 +12,10 @@
     "search": "Поиск товара..."
   },
   "newProducts": {
-    "title": "Yangi Maxsulotlar",
-    "comment": "Sharh",
+    "title": "Новые Продукты",
+    "comment": "Обзор",
+    "available": "Доступно",
+    "color": "Выберите цвет",
     "btn": "Посмотреть все"
   },
   "faq": {

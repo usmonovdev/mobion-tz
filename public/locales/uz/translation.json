@@ -14,6 +14,8 @@
   "newProducts": {
     "title": "Yangi Maxsulotlar",
     "comment": "Sharh",
+    "available": "Mavjud",
+    "color": "Rangini tanlang",
     "btn": "Barchasini ko'rish"
   },
   "faq": {
