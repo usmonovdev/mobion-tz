@@ -99,7 +99,7 @@ const Searchbar = () => {
                       bgcolor={"custom.greyToWhite"}
                       className="absolute cursor-pointer max-h-[400px] top-[60px] left-0 rounded-2xl w-full p-3"
                     >
-                      <TextP>{data.name}</TextP>
+                      <TextP sx={{ color: "#012350 !important" }}>{data.name}</TextP>
                     </Box>
                   );
                 })}
