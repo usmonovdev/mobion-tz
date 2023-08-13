@@ -67,6 +67,7 @@ function App() {
           },
           "::-webkit-scrollbar": {
             width: "8px",
+            hegiht: "8px"
           },
           "::-webkit-scrollbar-thumb": {
             borderRadius: "4px",

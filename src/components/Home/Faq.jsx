@@ -29,7 +29,7 @@ const Faq = () => {
   return (
     <div className="w-full" id="faq">
       <TextHeader marginBottom={"30px"}>{t("faq.title")}</TextHeader>
-      <div className="w-full max-w-[700px] mx-auto overflow-hidden">
+      <div className="w-full mx-auto overflow-hidden flex flex-col gap-3">
         {faqs.map((faq) => {
           return (
             <div
@@ -37,7 +37,7 @@ const Faq = () => {
               onClick={() => setOpen(faq.id)}
               key={faq.id}
             >
-              <div className="p-4 w-full flex flex-row items-center border border-[#9E9E9E] justify-between">
+              <div className={`p-4 w-full flex rounded-t-2xl flex-row items-center border justify-between ${open == faq.id ? "border-[#02C981]" : "border-[#9E9E9E]"}`}>
                 <TextH3>
                   {t(faq.title)}
                 </TextH3>
@@ -53,7 +53,7 @@ const Faq = () => {
                   open == faq.id
                     ? "block translate-y-0"
                     : "hidden -translate-y-5"
-                } transition p-4`}
+                } transition p-4 rounded-b-2xl`}
               >
                 <TextP>{t(faq.info)}</TextP>
               </Box>

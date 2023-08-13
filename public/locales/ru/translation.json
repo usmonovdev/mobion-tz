@@ -19,7 +19,8 @@
     "btn": "Посмотреть все",
     "features": "Технические характеристики",
     "all": "Общие",
-    "details": "Подробная информация о продукте"
+    "details": "Подробная информация о продукте",
+    "price": "Стоимость"
   },
   "products": {
     "title": "Все Продукты",
@@ -65,7 +66,15 @@
     "namePlaceholder": "Имя",
     "phone": "Ваш Номер Телефона",
     "phonePlaceholder": "Телефон",
-    "submit": "Отправить"
+    "submit": "Отправить",
+    "error": {
+      "all": "Information is incomplete!",
+      "name": "Name is required!",
+      "phone": "Phone is required!",
+      "mail": "Mail is required!",
+      "many_requests": "Слишком много попыток. Подождите 5 минут!"
+    },
+    "success": "Успешно отправлено!"
   },
   "footer": {
     "section1": {

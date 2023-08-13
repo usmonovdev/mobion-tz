@@ -12,7 +12,6 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const { t } = useTranslation();
-  const [value, setValue] = useState("");
   const [open, setOpen] = useState(false);
   const { palette } = useTheme();
   const navigate = useNavigate()
@@ -42,7 +41,7 @@ const Navbar = () => {
           );
         })}
       </ul>
-      <Searchbar value={value} setValue={setValue} />
+      <Searchbar/>
       <Box
         display={"flex"}
         flexDirection={"row"}

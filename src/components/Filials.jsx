@@ -1,17 +1,39 @@
 import React from "react";
-import shop from "../image/icons/shop.svg";
-import location from "../image/icons/location.svg";
-import time from "../image/icons/time.svg";
 import { useTranslation } from "react-i18next";
 import { TextP } from "../mui-customizations/Typography";
 import { useTheme } from "@emotion/react";
+import { Link } from "react-router-dom";
+
+const filials = [
+  {
+    id: 1,
+    location: "https://yandex.ru/maps/-/C-uGjgd",
+    short_location: "Gagarin koʻchasi, Samarqand",
+    name: "Do'kon",
+    time: "09:00 / 18:00",
+  },
+  {
+    id: 2,
+    location: "https://yandex.ru/maps/-/C-uKa9r",
+    short_location: "Gagarin koʻchasi, Samarqand",
+    name: "Do'kon",
+    time: "09:00 / 18:00",
+  },
+  {
+    id: 3,
+    location: "https://yandex.ru/maps/-/C-uGjgd",
+    short_location: "Gagarin koʻchasi, Samarqand",
+    name: "Do'kon",
+    time: "09:00 / 18:00",
+  },
+];
 
 const Filials = () => {
   const { t } = useTranslation();
   const { palette } = useTheme();
   return (
-    <div className="w-full my-6 phone:h-[500px] h-fit">
-      <table className="border w-full table-auto">
+    <div className="w-full overflow-x-auto my-6 phone:h-[500px] pb-4 h-fit">
+      <table className="border w-full table-auto min-w-[560px]">
         <thead>
           <tr
             className={`${
@@ -30,26 +52,17 @@ const Filials = () => {
           </tr>
         </thead>
         <tbody>
-          <tr className="border">
-            <td className="p-4">Do'kon</td>
-            <td className="p-4 text-center">Manzil</td>
-            <td className="p-4 text-end">Ish vaqti</td>
-          </tr>
-          <tr className="border">
-            <td className="p-4">Do'kon</td>
-            <td className="p-4 text-center">Manzil</td>
-            <td className="p-4 text-end">Ish vaqti</td>
-          </tr>
-          <tr className="border">
-            <td className="p-4">Do'kon</td>
-            <td className="p-4 text-center">Manzil</td>
-            <td className="p-4 text-end">Ish vaqti</td>
-          </tr>
-          <tr className="border">
-            <td className="p-4">Do'kon</td>
-            <td className="p-4 text-center">Manzil</td>
-            <td className="p-4 text-end">Ish vaqti</td>
-          </tr>
+          {filials.map((filial) => {
+            return (
+              <tr className="border">
+                <td className="p-4">{filial.name}</td>
+                <td className="p-4 text-center">
+                  <Link to={filial.location}>{filial.short_location}</Link>
+                </td>
+                <td className="p-4 text-end">{filial.time}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>

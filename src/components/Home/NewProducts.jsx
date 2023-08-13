@@ -19,7 +19,7 @@ const NewProducts = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleOpen = (id) => {
-    navigate(`/product/1`);
+    navigate(`/product/${id}`);
   };
 
   useEffect(() => {
