@@ -87,7 +87,7 @@ const Searchbar = () => {
                   bgcolor={"custom.greyToWhite"}
                   className="absolute cursor-pointer max-h-[400px] top-[60px] left-0 rounded-2xl w-full p-3"
                 >
-                  <TextP>{t("helpers.no_product")}</TextP>
+                  <TextP sx={{ color: "#012350 !important" }}>{t("helpers.no_product")}</TextP>
                 </Box>
               </>
             ) : (
