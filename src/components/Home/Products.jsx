@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import {
   TextHeader,
   TextInfo,
@@ -8,13 +8,42 @@ import { useTranslation } from "react-i18next";
 import { Box, CircularProgress, Rating } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import axios from "../../utils/axios-config";
-import { GET_NEW_PRODUCT } from "../../utils/api-links";
+import { GET_PRODUCTS } from "../../utils/api-links";
 import { TbMoodEmpty } from "react-icons/tb";
+import Sort from "../../ui-helpers/Sort";
 
-const NewProducts = () => {
+const sortData = [
+  {
+    id: 0,
+    name: "products.sort.title",
+    value: "all",
+  },
+  {
+    id: 1,
+    name: "header.catalog.earbud",
+    value: "earbud",
+  },
+  {
+    id: 2,
+    name: "header.catalog.electronics",
+    value: "Elektronika",
+  },
+  {
+    id: 3,
+    name: "header.catalog.holster",
+    value: "holster",
+  },
+  {
+    id: 4,
+    name: "header.catalog.eyeglass",
+    value: "eyeglass",
+  },
+];
+
+const Products = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-
+  const [sort, setSort] = useState(sortData[0]);
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -26,7 +55,7 @@ const NewProducts = () => {
     const getProducts = async () => {
       setIsLoading(true);
       try {
-        const { data } = await axios.get(GET_NEW_PRODUCT);
+        const { data } = await axios.get(GET_PRODUCTS);
         setData(data.results);
         setIsLoading(false);
       } catch (error) {
@@ -36,6 +65,15 @@ const NewProducts = () => {
     getProducts();
   }, []);
 
+  function getFilteredList() {
+    if (sort.value == "all") {
+      return data;
+    }
+    return data.filter((e) => e.choice == sort.value);
+  }
+
+  var filteredData = useMemo(getFilteredList, [sort, data]);
+
   return (
     <>
       <div className="flex flex-col gap-6">
@@ -43,10 +81,18 @@ const NewProducts = () => {
           {isLoading ? (
             <Box
               bgcolor={"custom.contact"}
-              className="w-[270px] h-[50px] rounded-lg"
+              className="w-[300px] h-[50px] rounded-lg"
             ></Box>
           ) : (
-            <TextHeader>{t("newProducts.title")}</TextHeader>
+            <TextHeader>{t("products.title")}</TextHeader>
+          )}
+          {isLoading ? (
+            <Box
+              bgcolor={"custom.contact"}
+              className="phone:w-[200px] w-full h-[50px] rounded-lg"
+            ></Box>
+          ) : (
+            <Sort data={sortData} selected={sort} setSelected={setSort} />
           )}
         </div>
         {isLoading ? (
@@ -67,7 +113,7 @@ const NewProducts = () => {
           </>
         ) : (
           <>
-            {data.length <= 0 ? (
+            {filteredData.length <= 0 ? (
               <>
                 <Box className="cards">
                   {[1, 2, 3, 4].map((data) => {
@@ -89,7 +135,7 @@ const NewProducts = () => {
             ) : (
               <>
                 <div className="cards">
-                  {data.map((product) => {
+                  {filteredData.map((product) => {
                     return (
                       <div
                         key={product.id}
@@ -133,4 +179,4 @@ const NewProducts = () => {
   );
 };
 
-export default NewProducts;
+export default Products;

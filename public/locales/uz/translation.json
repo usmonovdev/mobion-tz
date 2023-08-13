@@ -13,13 +13,19 @@
   },
   "newProducts": {
     "title": "Yangi Maxsulotlar",
-    "comment": "Sharh",
+    "comment": "sharh",
     "available": "Mavjud",
     "color": "Rangini tanlang",
     "btn": "Barchasini ko'rish",
     "features": "Texnik xususiyatlari",
     "all": "Umumiy",
     "details": "Mahsulot tafsilotlari"
+  },
+  "products": {
+    "title": "Barcha Maxsulotlar",
+    "sort": {
+      "title": "Barchasi"
+    }
   },
   "about": {
     "title": "Biz haqimizda",
@@ -78,6 +84,7 @@
   },
   "helpers": {
     "connect": "Biz bilan bog’lanish",
-    "shop": "Hozir xarid qiling"
+    "shop": "Hozir xarid qiling",
+    "no_product": "Maxsulotlar topilmadi"
   }
 }

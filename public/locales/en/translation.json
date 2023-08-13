@@ -13,13 +13,19 @@
   },
   "newProducts": {
     "title": "New Products",
-    "comment": "Comment",
+    "comment": "comment",
     "available": "Available",
     "color": "Choose a color",
     "btn": "See all",
     "features": "Technical characteristics",
     "all": "General",
     "details": "Product details"
+  },
+  "products": {
+    "title": "All Products",
+    "sort": {
+      "title": "All"
+    }
   },
   "about": {
     "title": "About us",
@@ -78,6 +84,7 @@
   },
   "helpers": {
     "connect": "Contact us",
-    "shop": "Shop now"
+    "shop": "Shop now",
+    "no_product": "No Product"
   }
 }

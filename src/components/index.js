@@ -8,6 +8,7 @@ export { default as Hero } from "./Home/Hero"
 export { default as Faq } from "./Home/Faq"
 export { default as Contact } from "./Home/Contact"
 export { default as NewProducts } from "./Home/NewProducts"
+export { default as Products } from "./Home/Products"
 
 // product
 export { default as ProductOpen } from "./Product/ProductOpen"

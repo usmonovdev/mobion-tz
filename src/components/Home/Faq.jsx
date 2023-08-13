@@ -27,7 +27,7 @@ const Faq = () => {
   const { t } = useTranslation();
   const [open, setOpen] = useState(1);
   return (
-    <div className="w-full">
+    <div className="w-full" id="faq">
       <TextHeader marginBottom={"30px"}>{t("faq.title")}</TextHeader>
       <div className="w-full max-w-[700px] mx-auto overflow-hidden">
         {faqs.map((faq) => {

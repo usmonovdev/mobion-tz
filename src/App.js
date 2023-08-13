@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { Navbar, Footer, Home, ProductOpen, About, Filials, Tel } from "./components";
 import Aos from "aos";
 import 'aos/dist/aos.css';
+import 'swiper/css';
 import { Route, Routes } from "react-router-dom";
 const { palette } = createTheme();
 const { augmentColor } = palette;
@@ -62,6 +63,7 @@ function App() {
             hegiht: "100vh",
             overflowX: "hidden",
             backgroundColor: theme.palette.custom.background,
+            scrollBehavior: "smooth"
           },
           "::-webkit-scrollbar": {
             width: "8px",
