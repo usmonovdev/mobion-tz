@@ -6,12 +6,14 @@ import {
 } from "../../mui-customizations/Typography";
 import { useTranslation } from "react-i18next";
 import { Box, CircularProgress, Rating } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "../../utils/axios-config";
 import { GET_NEW_PRODUCT } from "../../utils/api-links";
 import { TbMoodEmpty } from "react-icons/tb";
 
-const NewProducts = () => {
+const OpenByChoise = () => {
+  const link = useParams();
+  console.log(link);
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -38,7 +40,7 @@ const NewProducts = () => {
 
   return (
     <>
-      <div className="flex flex-col gap-6">
+      {/* <div className="flex flex-col gap-6">
         <div className="flex phone:flex-row flex-col justify-between">
           {isLoading ? (
             <Box
@@ -128,9 +130,9 @@ const NewProducts = () => {
             )}
           </>
         )}
-      </div>
+      </div> */}
     </>
   );
 };
 
-export default NewProducts;
+export default OpenByChoise;

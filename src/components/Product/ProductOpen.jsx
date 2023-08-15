@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { newProduct } from "../../data/newProducts.js";
 import {
   TextH3,
   TextHeader,

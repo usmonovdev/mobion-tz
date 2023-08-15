@@ -21,7 +21,7 @@ const sortData = [
   {
     id: 1,
     name: "header.catalog.earbud",
-    value: "earbud",
+    value: "Quloqchinlar",
   },
   {
     id: 2,
@@ -31,12 +31,12 @@ const sortData = [
   {
     id: 3,
     name: "header.catalog.holster",
-    value: "holster",
+    value: "Telefon g'ilof",
   },
   {
     id: 4,
     name: "header.catalog.eyeglass",
-    value: "eyeglass",
+    value: "Ko'zoynak",
   },
 ];
 
@@ -46,9 +46,9 @@ const Products = () => {
   const [sort, setSort] = useState(sortData[0]);
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
+  
   const handleOpen = (id) => {
-    navigate(`/product/1`);
+    navigate(`/product/${id}`);
   };
 
   useEffect(() => {
@@ -158,12 +158,12 @@ const Products = () => {
                           </TextInfo>
                           <div className="flex flex-row gap-2 w-full items-center">
                             <Rating
-                              value={product.star}
+                              value={5}
                               readOnly
                               className=""
                               size="small"
                             />
-                            <TextInfo>(0 {t("newProducts.comment")})</TextInfo>
+                            <TextInfo>(11 {t("newProducts.comment")})</TextInfo>
                           </div>
                         </div>
                       </div>

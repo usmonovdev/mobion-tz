@@ -94,6 +94,8 @@
   "helpers": {
     "connect": "Biz bilan bog’lanish",
     "shop": "Hozir xarid qiling",
-    "no_product": "Maxsulotlar topilmadi"
+    "no_product": "Maxsulotlar topilmadi",
+    "no_page": "Saxifa topilmadi",
+    "back": "Ortga qaytish"
   }
 }

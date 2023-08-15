@@ -4,10 +4,12 @@ import { useTranslation } from "react-i18next";
 import { IoIosArrowDown } from "react-icons/io";
 import { navbarCatalog } from "../data/navbar";
 import { Box } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const Catalog = () => {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate()
   return (
     <li
       className="flex flex-row items-center gap-1 cursor-pointer relative"
@@ -21,7 +23,7 @@ const Catalog = () => {
             {navbarCatalog.map((catalog) => {
               return (
                 <li>
-                  <TextP className="hover:text-[#02C981] transition">{t(catalog.label)}</TextP>
+                  <TextP onClick={() => navigate(`/choice/${catalog.link}`)} className="hover:text-[#02C981] transition">{t(catalog.label)}</TextP>
                 </li>
               );
             })}

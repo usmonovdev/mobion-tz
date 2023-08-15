@@ -7,8 +7,6 @@ import phoneIcon from "../../image/icons/phone-green.svg";
 import mailIcon from "../../image/icons/mail.svg";
 import telegram from "../../image/icons/telegram-green.svg";
 import instagram from "../../image/icons/instagram-green.svg";
-import youtube from "../../image/icons/youtube-green.svg";
-import facebook from "../../image/icons/facebook-green.svg";
 import { useTheme } from "@emotion/react";
 import axios from "../../utils/axios-config";
 import { POST_EMAIL } from "../../utils/api-links";
@@ -187,7 +185,7 @@ const Contact = () => {
               <li className="flex flex-row gap-3">
                 <img src={phoneIcon} alt="phone" />
                 <TextP>
-                  <a href="tel:+998943320016">+998 94 332 00 16</a>
+                  <a href="tel:+998915477070">+99891 547 70 70</a>
                 </TextP>
               </li>
               <li className="flex flex-row gap-3">
@@ -203,16 +201,6 @@ const Contact = () => {
                 <li>
                   <a href="https://instagram.com/mobion_uz?igshid=Y2I2MzMwZWM3ZA==">
                     <img src={instagram} />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src={youtube} />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src={facebook} />
                   </a>
                 </li>
               </ul>

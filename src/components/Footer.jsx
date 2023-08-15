@@ -1,13 +1,11 @@
 import { Box } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { TextH3, TextInfo, TextP } from "../mui-customizations/Typography";
+import { TextH3, TextP } from "../mui-customizations/Typography";
 import phone from "../image/icons/phone.svg";
 import site from "../image/icons/language.svg";
 import telegram from "../image/icons/telegram.svg";
 import instagram from "../image/icons/instagram.svg";
-import youtube from "../image/icons/youtube.svg";
-import facebook from "../image/icons/facebook.svg";
 import prime from "../image/prime.png";
 import mobion from "../image/logo-white.png";
 import styled from "@emotion/styled";
@@ -67,8 +65,8 @@ const Footer = () => {
             </li>
             <li className="flex flex-row gap-2">
               <img src={phone} alt={"phone"} />
-              <a className="text-white" href="tel:+998943320016">
-                +998 94 332 00 16
+              <a className="text-white" href="tel:+998915477070">
+                +99891 547 70 70
               </a>
             </li>
             <li className="flex flex-row gap-2">
@@ -89,16 +87,6 @@ const Footer = () => {
                     <img src={instagram} alt="instagram" />
                   </a>
                 </li>
-                <li>
-                  <a href="/">
-                    <img src={youtube} alt="youtube" />
-                  </a>
-                </li>
-                <li>
-                  <a href="/">
-                    <img src={facebook} alt="facebook" />
-                  </a>
-                </li>
               </ul>
             </li>
           </ul>
@@ -110,10 +98,14 @@ const Footer = () => {
           </Link>
           <p className="text-[#D1E1F980] text-center">{t("footer.info")}</p>
           <div className="flex laptop:flex-row flex-col gap-2 items-center">
-            <img src={prime} alt="prime tech logo" className="w-[120px]" />
-            <p className="text-[#D1E1F980] flex flex-row">
-              {t("footer.creator")}
-            </p>
+            <a href="https://primetechgroup.uz">
+              <img src={prime} alt="prime tech logo" className="w-[50px]" />
+            </a>
+            <a href="https://primetechgroup.uz">
+              <p className="text-[#D1E1F980] flex flex-row">
+                {t("footer.creator")}
+              </p>
+            </a>
           </div>
         </div>
       </div>

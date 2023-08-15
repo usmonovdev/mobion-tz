@@ -94,6 +94,8 @@
   "helpers": {
     "connect": "Contact us",
     "shop": "Shop now",
-    "no_product": "No Product"
+    "no_product": "No Product",
+    "no_page": "Page Not Found",
+    "back": "Back"
   }
 }
