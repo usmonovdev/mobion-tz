@@ -8,17 +8,19 @@ import { useTranslation } from "react-i18next";
 import { Box, CircularProgress, Rating } from "@mui/material";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "../../utils/axios-config";
-import { GET_NEW_PRODUCT } from "../../utils/api-links";
+import { GET_PRODUCTS } from "../../utils/api-links";
 import { TbMoodEmpty } from "react-icons/tb";
+import { LoadingButton } from "@mui/lab";
+import { navbarCatalog } from "../../data/navbar";
 
-const OpenByChoise = () => {
-  const link = useParams();
-  console.log(link);
+const ChoiceProduct = () => {
+  const { choice } = useParams();
   const { t } = useTranslation();
   const navigate = useNavigate();
 
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [limit, setLimit] = useState(12);
 
   const handleOpen = (id) => {
     navigate(`/product/${id}`);
@@ -28,7 +30,11 @@ const OpenByChoise = () => {
     const getProducts = async () => {
       setIsLoading(true);
       try {
-        const { data } = await axios.get(GET_NEW_PRODUCT);
+        const { data } = await axios.get(GET_PRODUCTS, {
+          params: {
+            choice: choice,
+          },
+        });
         setData(data.results);
         setIsLoading(false);
       } catch (error) {
@@ -36,11 +42,11 @@ const OpenByChoise = () => {
       }
     };
     getProducts();
-  }, []);
+  }, [limit, choice]);
 
   return (
     <>
-      {/* <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 mb-8">
         <div className="flex phone:flex-row flex-col justify-between">
           {isLoading ? (
             <Box
@@ -48,7 +54,21 @@ const OpenByChoise = () => {
               className="w-[270px] h-[50px] rounded-lg"
             ></Box>
           ) : (
-            <TextHeader>{t("newProducts.title")}</TextHeader>
+            <>
+              {navbarCatalog.map((data) => {
+                return (
+                  <>
+                    {data.link == choice ? (
+                      <TextHeader key={data.id} data-aos="fade-up">
+                        {t(data.label)}
+                      </TextHeader>
+                    ) : (
+                      ""
+                    )}
+                  </>
+                );
+              })}
+            </>
           )}
         </div>
         {isLoading ? (
@@ -90,7 +110,7 @@ const OpenByChoise = () => {
               </>
             ) : (
               <>
-                <div className="cards">
+                <div className="cards" data-aos="fade-up">
                   {data.map((product) => {
                     return (
                       <div
@@ -126,13 +146,28 @@ const OpenByChoise = () => {
                     );
                   })}
                 </div>
+                {data.length < limit ? (
+                  ""
+                ) : (
+                  <div className="w-full flex items-center justify-center">
+                    <LoadingButton
+                      variant="contained"
+                      className="w-fit"
+                      sx={{ color: "#fff !important" }}
+                      loading={isLoading}
+                      onClick={() => setLimit(limit + 4)}
+                    >
+                      {t("helpers.see_all")}
+                    </LoadingButton>
+                  </div>
+                )}
               </>
             )}
           </>
         )}
-      </div> */}
+      </div>
     </>
   );
 };
 
-export default OpenByChoise;
+export default ChoiceProduct;

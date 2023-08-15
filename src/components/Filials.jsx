@@ -54,7 +54,7 @@ const Filials = () => {
         <tbody>
           {filials.map((filial) => {
             return (
-              <tr className="border">
+              <tr className="border" key={filial.id}>
                 <td className="p-4">{filial.name}</td>
                 <td className="p-4 text-center">
                   <Link to={filial.location}>{filial.short_location}</Link>

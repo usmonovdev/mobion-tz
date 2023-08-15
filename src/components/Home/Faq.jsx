@@ -1,7 +1,13 @@
 import { HiChevronUp } from "react-icons/hi";
 import { faqs } from "../../data/faqs";
 import { useTranslation } from "react-i18next";
-import { TextH1, TextH2, TextH3, TextHeader, TextP } from "../../mui-customizations/Typography";
+import {
+  TextH1,
+  TextH2,
+  TextH3,
+  TextHeader,
+  TextP,
+} from "../../mui-customizations/Typography";
 import { useState } from "react";
 import styled from "@emotion/styled";
 import { Box } from "@mui/material";
@@ -33,14 +39,17 @@ const Faq = () => {
         {faqs.map((faq) => {
           return (
             <div
+              data-aos="fade-up"
               className="w-full cursor-pointer"
               onClick={() => setOpen(faq.id)}
               key={faq.id}
             >
-              <div className={`p-4 w-full flex rounded-t-2xl flex-row items-center border justify-between ${open == faq.id ? "border-[#02C981]" : "border-[#9E9E9E]"}`}>
-                <TextH3>
-                  {t(faq.title)}
-                </TextH3>
+              <div
+                className={`p-4 w-full flex rounded-t-2xl flex-row items-center border justify-between ${
+                  open == faq.id ? "border-[#02C981]" : "border-[#9E9E9E]"
+                }`}
+              >
+                <TextH3>{t(faq.title)}</TextH3>
                 <HiChevronUp
                   className={`text-4xl transition ${
                     open == faq.id ? "rotate-180" : ""
@@ -48,7 +57,7 @@ const Faq = () => {
                 />
               </div>
               <Box
-                bgcolor={'custom.whiteToBlack'}
+                bgcolor={"custom.whiteToBlack"}
                 className={`${
                   open == faq.id
                     ? "block translate-y-0"

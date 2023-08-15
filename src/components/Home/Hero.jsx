@@ -40,9 +40,9 @@ const Hero = () => {
                 className="mySwiper"
                 navigation={{ nextEl: ".arrow-left", prevEl: ".arrow-right" }}
               >
-                {data.map((data) => {
+                {data.map((data, index) => {
                   return (
-                    <SwiperSlide>
+                    <SwiperSlide key={index}>
                       <Link to={`/product/${data}`}>
                         <img
                           key={data}

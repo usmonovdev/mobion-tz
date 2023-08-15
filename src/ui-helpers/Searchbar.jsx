@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, CircularProgress } from "@mui/material";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FiSearch } from "react-icons/fi";
@@ -87,7 +87,9 @@ const Searchbar = () => {
                   bgcolor={"custom.greyToWhite"}
                   className="absolute cursor-pointer max-h-[400px] top-[60px] left-0 rounded-2xl w-full p-3"
                 >
-                  <TextP sx={{ color: "#012350 !important" }}>{t("helpers.no_product")}</TextP>
+                  <TextP sx={{ color: "#012350 !important" }}>
+                    {t("helpers.no_product")}
+                  </TextP>
                 </Box>
               </>
             ) : (
@@ -95,11 +97,20 @@ const Searchbar = () => {
                 {filteredData.map((data) => {
                   return (
                     <Box
+                      key={data.id}
                       onClick={() => handleOpen(data.id)}
                       bgcolor={"custom.greyToWhite"}
                       className="absolute cursor-pointer max-h-[400px] top-[60px] left-0 rounded-2xl w-full p-3"
                     >
-                      <TextP sx={{ color: "#012350 !important" }}>{data.name}</TextP>
+                      {isLoading ? (
+                        <div className="w-full flex items-center justify-center">
+                        <CircularProgress size={"2rem"} />
+                        </div>
+                      ) : (
+                        <TextP sx={{ color: "#012350 !important" }}>
+                          {data.name}
+                        </TextP>
+                      )}
                     </Box>
                   );
                 })}

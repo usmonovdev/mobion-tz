@@ -22,7 +22,7 @@ const CatalogMobile = () => {
           <ul>
             {navbarCatalog.map((catalog) => {
               return (
-                <li className=" pt-3 pb-2">
+                <li className=" pt-3 pb-2" key={catalog.id}>
                   <TextP className="hover:text-[#02C981] transition">{t(catalog.label)}</TextP>
                 </li>
               );

@@ -51,6 +51,16 @@
   font-style: normal;
 }
 
+[data-aos] {
+  pointer-events: none;
+}
+.aos-animate {
+  pointer-events: auto;
+}
+.aos-init[data-aos][data-aos].aos-animate {
+  transform: unset;
+}
+
 @layer components {
   .center-mode {
     @apply flex items-center justify-center;

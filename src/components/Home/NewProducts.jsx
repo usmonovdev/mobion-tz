@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "../../utils/axios-config";
 import { GET_NEW_PRODUCT } from "../../utils/api-links";
 import { TbMoodEmpty } from "react-icons/tb";
+import { LoadingButton } from "@mui/lab";
 
 const NewProducts = () => {
   const { t } = useTranslation();
@@ -17,6 +18,7 @@ const NewProducts = () => {
 
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [limit, setLimit] = useState(12);
 
   const handleOpen = (id) => {
     navigate(`/product/${id}`);
@@ -26,7 +28,11 @@ const NewProducts = () => {
     const getProducts = async () => {
       setIsLoading(true);
       try {
-        const { data } = await axios.get(GET_NEW_PRODUCT);
+        const { data } = await axios.get(GET_NEW_PRODUCT, {
+          params: {
+            limit: limit,
+          },
+        });
         setData(data.results);
         setIsLoading(false);
       } catch (error) {
@@ -34,7 +40,7 @@ const NewProducts = () => {
       }
     };
     getProducts();
-  }, []);
+  }, [limit]);
 
   return (
     <>
@@ -46,7 +52,7 @@ const NewProducts = () => {
               className="w-[270px] h-[50px] rounded-lg"
             ></Box>
           ) : (
-            <TextHeader>{t("newProducts.title")}</TextHeader>
+            <TextHeader data-aos="fade-up">{t("newProducts.title")}</TextHeader>
           )}
         </div>
         {isLoading ? (
@@ -88,7 +94,7 @@ const NewProducts = () => {
               </>
             ) : (
               <>
-                <div className="cards">
+                <div className="cards" data-aos="fade-up">
                   {data.map((product) => {
                     return (
                       <div
@@ -124,6 +130,21 @@ const NewProducts = () => {
                     );
                   })}
                 </div>
+                {data.length < limit ? (
+                  ""
+                ) : (
+                  <div className="w-full flex items-center justify-center">
+                    <LoadingButton
+                      variant="contained"
+                      className="w-fit"
+                      sx={{ color: "#fff !important" }}
+                      loading={isLoading}
+                      onClick={() => setLimit(limit + 4)}
+                    >
+                      {t("helpers.see_all")}
+                    </LoadingButton>
+                  </div>
+                )}
               </>
             )}
           </>

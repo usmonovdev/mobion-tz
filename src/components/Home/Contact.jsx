@@ -104,7 +104,7 @@ const Contact = () => {
           {t("contact.success")}
         </Alert>
       </Snackbar>
-      <div className="contact">
+      <div className="contact" data-aos="fade-up">
         <TextHeader marginBottom={"30px"}>{t("contact.title")}</TextHeader>
         <Box
           bgcolor={"custom.contact"}

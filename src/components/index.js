@@ -13,7 +13,7 @@ export { default as Products } from "./Home/Products"
 
 // product
 export { default as ProductOpen } from "./Product/ProductOpen"
-export { default as OpenByChoise } from "./Product/OpenByChoise"
+export { default as ChoiceProduct } from "./Product/ChoiceProduct"
 
 // about
 export { default as About } from "./About"

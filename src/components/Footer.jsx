@@ -49,12 +49,12 @@ const Footer = () => {
             </li>
             <li>
               <Scroll to="contact" spy={true} offset={-10} smooth={true}>
-                <StyledTextP>{t("footer.section2.contact")}</StyledTextP>
+                <StyledTextP className="cursor-pointer">{t("footer.section2.contact")}</StyledTextP>
               </Scroll>
             </li>
             <li>
               <Scroll to="faq" spy={true} offset={-10} smooth={true}>
-                <StyledTextP>{t("footer.section2.faq")}</StyledTextP>
+                <StyledTextP className="cursor-pointer">{t("footer.section2.faq")}</StyledTextP>
               </Scroll>
             </li>
           </ul>

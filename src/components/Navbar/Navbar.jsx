@@ -14,9 +14,9 @@ const Navbar = () => {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const { palette } = useTheme();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
-    <nav className="w-full h-[96px] flex flex-row items-center justify-between gap-3">
+    <nav className="w-full h-[96px] flex flex-row items-center justify-between gap-3" data-aos="fade-down">
       <div className="desktop:hidden" onClick={() => setOpen(!open)}>
         <RxHamburgerMenu className="text-4xl cursor-pointer" />
       </div>
@@ -36,12 +36,14 @@ const Navbar = () => {
               className="flex flex-row items-center gap-1 cursor-pointer"
               onClick={() => navigate(link.link)}
             >
-              <TextP className="hover:text-[#02C981] transition">{t(link.label)}</TextP>
+              <TextP className="hover:text-[#02C981] transition">
+                {t(link.label)}
+              </TextP>
             </li>
           );
         })}
       </ul>
-      <Searchbar/>
+      <Searchbar />
       <Box
         display={"flex"}
         flexDirection={"row"}

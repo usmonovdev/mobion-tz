@@ -94,10 +94,10 @@ const ProductOpen = () => {
           </>
         ) : (
           <>
-            {data.map((data) => {
+            {data.map((data, index) => {
               return (
                 <>
-                  <div className="desktop:w-2/4 w-full">
+                  <div className="desktop:w-2/4 w-full" key={index}>
                     <img
                       className="w-full object-cover h-full rounded-2xl"
                       src={data.image}

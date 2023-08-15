@@ -10,6 +10,11 @@ const Catalog = () => {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const navigate = useNavigate()
+
+  const handleOpen = (choice) => {
+    navigate(`/choice/${choice}`)
+  }
+
   return (
     <li
       className="flex flex-row items-center gap-1 cursor-pointer relative"
@@ -18,12 +23,12 @@ const Catalog = () => {
       <TextP className="hover:text-[#02C981] transition">{t("header.catalog.title")}</TextP>
       <IoIosArrowDown />
       {open ? (
-        <Box width={'200px'} bgcolor={'custom.background'} className="absolute top-0 mt-8 p-3 flex flex-col gap-5 rounded-lg">
+        <Box width={'200px'} bgcolor={'custom.background'} className="absolute !z-[10000] top-0 mt-8 p-3 flex flex-col gap-5 rounded-lg">
           <ul>
             {navbarCatalog.map((catalog) => {
               return (
-                <li>
-                  <TextP onClick={() => navigate(`/choice/${catalog.link}`)} className="hover:text-[#02C981] transition">{t(catalog.label)}</TextP>
+                <li key={catalog.id}>
+                  <TextP onClick={() => handleOpen(catalog.link)} className="hover:text-[#02C981] transition">{t(catalog.label)}</TextP>
                 </li>
               );
             })}

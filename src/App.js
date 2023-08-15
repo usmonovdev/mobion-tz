@@ -1,7 +1,7 @@
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import { useEffect, useMemo, useState } from "react";
 import { useSelector } from "react-redux";
-import { Navbar, Footer, Home, ProductOpen, About, Filials, Tel, NotFound } from "./components";
+import { Navbar, Footer, Home, ProductOpen, About, Filials, Tel, NotFound, ChoiceProduct } from "./components";
 import Aos from "aos";
 import 'aos/dist/aos.css';
 import 'swiper/css';
@@ -99,7 +99,7 @@ function App() {
   useEffect(() => {
     Aos.init({
       once: true,
-      duration: 500,
+      duration: 400,
       easing: 'ease-out-sine',
     });
   }, [])
@@ -115,6 +115,7 @@ function App() {
           <Route path="/about" element={<About />}/>
           <Route path="/filials" element={<Filials />}/>
           <Route path="/product/:id" element={<ProductOpen />}/>
+          <Route path="/choice/:choice" element={<ChoiceProduct />}/>
           <Route path="*" element={<NotFound />}/>
         </Routes>
       </div>
