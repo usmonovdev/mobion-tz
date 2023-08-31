@@ -40,24 +40,24 @@
   "faq": {
     "title": "Tez-tez so'raladigan savollar",
     "card1": {
-      "title": "Yetkazib berishning qanday usullari mavjud?",
+      "title": "Yetkazib berishning qanday usullari bor?",
       "info": "Kuryer orqali yetkazib berish 30 000 so’mni tashkil etadi. Agar buyurtma qiymat narxi 490 000 so’mdan oshsa, kuryer xizmati bepul hisoblanadi."
     },
     "card2": {
-      "title": "Yetkazib berishning qanday usullari mavjud?",
-      "info": "Kuryer orqali yetkazib berish 30 000 so’mni tashkil etadi. Agar buyurtma qiymat narxi 490 000 so’mdan oshsa, kuryer xizmati bepul hisoblanadi."
+      "title": "Mahsulotni faqat onlayn xarid qilish mumkinmi?",
+      "info": "Yo'q, albatta. Samarqand shahriga kelib, do'konni o'zidan ham xarid qilishingiz mumkin."
     },
     "card3": {
-      "title": "Yetkazib berishning qanday usullari mavjud?",
-      "info": "Kuryer orqali yetkazib berish 30 000 so’mni tashkil etadi. Agar buyurtma qiymat narxi 490 000 so’mdan oshsa, kuryer xizmati bepul hisoblanadi."
+      "title": "Buyurtma qilganimizdan so'ng, qancha vaqtda yetkazib beriladi?",
+      "info": "Toshket shahri uchun ... kunda, boshqa viloyatlarga ... kunda kuryer orqali yetkazib beriladi."
     },
     "card4": {
-      "title": "Yetkazib berishning qanday usullari mavjud?",
-      "info": "Kuryer orqali yetkazib berish 30 000 so’mni tashkil etadi. Agar buyurtma qiymat narxi 490 000 so’mdan oshsa, kuryer xizmati bepul hisoblanadi."
+      "title": "To'lovni qay tariqa amalga oshiramiz?",
+      "info": "To'lov CLICK, PAYME yoki naqd pul shaklida amalga oshiriladi. "
     },
     "card5": {
-      "title": "Yetkazib berishning qanday usullari mavjud?",
-      "info": "Kuryer orqali yetkazib berish 30 000 so’mni tashkil etadi. Agar buyurtma qiymat narxi 490 000 so’mdan oshsa, kuryer xizmati bepul hisoblanadi."
+      "title": "Mahsulotingiz sifatlimi?",
+      "info": "'Mobion' do'konida Siz faqat original mahsulotlarni ko'rishingiz mumkin."
     }
   },
   "contact": {

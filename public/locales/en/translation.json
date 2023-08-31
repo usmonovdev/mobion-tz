@@ -40,24 +40,24 @@
   "faq": {
     "title": "Frequently asked questions",
     "card1": {
-      "title": "What methods of delivery are there?",
-      "info": "Delivery by courier is 30,000. Courier service is free if the order value price exceeds 490,000 rubles."
+      "title": "What are the shipping methods?",
+      "info": "Delivery by courier is 30,000 soums. If the value of the order exceeds 490,000 soums, the courier service is free."
     },
     "card2": {
-      "title": "What methods of delivery are there?",
-      "info": "Delivery by courier is 30,000. Courier service is free if the order value price exceeds 490,000 rubles."
+      "title": "Can the product be purchased online only?",
+      "info": "Of course not. You can come to Samarkand and buy in the store itself."
     },
     "card3": {
-      "title": "What methods of delivery are there?",
-      "info": "Delivery by courier is 30,000. Courier service is free if the order value price exceeds 490,000 rubles."
+      "title": "How long will delivery take after ordering?",
+      "info": "In the city of Samarkand it will be delivered by courier ... day, to other regions ... day."
     },
     "card4": {
-      "title": "What methods of delivery are there?",
-      "info": "Delivery by courier is 30,000. Courier service is free if the order value price exceeds 490,000 rubles."
+      "title": "How do we make the payment?",
+      "info": "Payment is made in the form of CLICK, PAYME or cash."
     },
     "card5": {
-      "title": "What methods of delivery are there?",
-      "info": "Delivery by courier is 30,000. Courier service is free if the order value price exceeds 490,000 rubles."
+      "title": "Is your product quality?",
+      "info": "In the 'Mobion' store, you can see only original products."
     }
   },
   "contact": {
