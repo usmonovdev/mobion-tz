@@ -18,6 +18,7 @@ const ProductOpen = () => {
   const { palette } = useTheme();
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  console.log(data);
 
   const getData = async () => {
     setIsLoading(true);
@@ -106,12 +107,7 @@ const ProductOpen = () => {
                   <div className="desktop:w-2/4 w-full flex flex-col gap-4">
                     <TextHeader>{data.name}</TextHeader>
                     <TextInfo>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Corrupti reprehenderit illo eligendi assumenda dicta.
-                      Labore dignissimos impedit voluptatem temporibus
-                      repudiandae, officia obcaecati aperiam animi sequi in!
-                      Aliquid quaerat aperiam modi eveniet ut iusto, animi
-                      recusandae saepe? Ipsum unde iusto consectetur.
+                      {data.description}
                     </TextInfo>
                     <div className="flex flex-row gap-2 w-full items-center">
                       <Rating value={0} readOnly className="" size="small" />
@@ -134,23 +130,7 @@ const ProductOpen = () => {
                       <TextHeader>{t("newProducts.color")}</TextHeader>
                       <div className="flex flex-row gap-3">
                         <div
-                          style={{ backgroundColor: "#403F3D" }}
-                          className="w-[40px] h-[40px] rounded-full cursor-pointer"
-                        ></div>
-                        <div
-                          style={{ backgroundColor: "#E4554D" }}
-                          className="w-[40px] h-[40px] rounded-full"
-                        ></div>
-                        <div
-                          style={{ backgroundColor: "#AEBCA6" }}
-                          className="w-[40px] h-[40px] rounded-full cursor-pointer"
-                        ></div>
-                        <div
-                          style={{ backgroundColor: "#D4D2D7" }}
-                          className="w-[40px] h-[40px] rounded-full cursor-pointer"
-                        ></div>
-                        <div
-                          style={{ backgroundColor: "#2F5171" }}
+                          style={{ backgroundColor: data.color }}
                           className="w-[40px] h-[40px] rounded-full cursor-pointer"
                         ></div>
                       </div>
